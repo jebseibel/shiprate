@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: Shiprate
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: password
+    url: jdbc:mysql://localhost:3306/shiprate
+    username: jeb
+  jpa:
+    show-sql: false
+  main:
+    allow-bean-definition-overriding: true
+logging:
+  level:
+    com:
+      shiprate: INFO
+    root: INFO

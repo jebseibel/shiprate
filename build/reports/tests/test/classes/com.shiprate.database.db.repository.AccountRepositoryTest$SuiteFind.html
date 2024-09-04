@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - SuiteFind</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>SuiteFind</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.shiprate.database.db.repository.html">com.shiprate.database.db.repository</a> &gt; AccountRepositoryTest$SuiteFind</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">4</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.666s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">findAll()</td>
+<td class="success">0.558s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">findByExtid()</td>
+<td class="success">0.017s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">findById()</td>
+<td class="success">0.030s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">findByName()</td>
+<td class="success">0.061s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>14:07:21.969 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.shiprate.database.db.repository.AccountRepositoryTest$SuiteFind]: SuiteFind does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+14:07:21.973 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.shiprate.ShiprateApplication for test class com.shiprate.database.db.repository.AccountRepositoryTest$SuiteFind
+14:07:22.016 [Test worker] INFO org.springframework.boot.devtools.restart.RestartApplicationListener -- Restart disabled due to context in which it is running
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::       (v3.2.8-SNAPSHOT)
+
+2024-09-04T14:07:22.250-05:00  WARN 194234 --- [Shiprate] [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/jeb/.sdkman/candidates/gradle/8.8/caches/modules-2/files-2.1/org.json/json/20141113/c590c04911645db2f53b9bbefd5c3fcd8ca5581d/json-20141113.jar!/org/json/JSONObject.class
+	jar:file:/home/jeb/.sdkman/candidates/gradle/8.8/caches/modules-2/files-2.1/com.vaadin.external.google/android-json/0.0.20131108.vaadin1/fa26d351fe62a6a17f5cda1287c1c6110dec413f/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-09-04T14:07:22.259-05:00  INFO 194234 --- [Shiprate] [    Test worker] c.s.d.d.r.AccountRepositoryTest          : Starting AccountRepositoryTest using Java 21.0.4 with PID 194234 (started by jeb in /home/jeb/projects/shiprate)
+2024-09-04T14:07:22.260-05:00  INFO 194234 --- [Shiprate] [    Test worker] c.s.d.d.r.AccountRepositoryTest          : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-09-04T14:07:22.696-05:00  INFO 194234 --- [Shiprate] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-04T14:07:22.733-05:00  INFO 194234 --- [Shiprate] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 1 JPA repository interface.
+2024-09-04T14:07:23.038-05:00  INFO 194234 --- [Shiprate] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-04T14:07:23.349-05:00  INFO 194234 --- [Shiprate] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@50cbcca7
+2024-09-04T14:07:23.351-05:00  INFO 194234 --- [Shiprate] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-04T14:07:23.611-05:00  INFO 194234 --- [Shiprate] [    Test worker] liquibase.changelog                      : Reading resource: db/changelog/changes/001-init.yaml
+2024-09-04T14:07:23.794-05:00  INFO 194234 --- [Shiprate] [    Test worker] liquibase.changelog                      : Reading from shiprate.DATABASECHANGELOG
+2024-09-04T14:07:23.829-05:00  INFO 194234 --- [Shiprate] [    Test worker] liquibase.ui                             : Database is up to date, no changesets to execute
+2024-09-04T14:07:23.831-05:00  INFO 194234 --- [Shiprate] [    Test worker] liquibase.changelog                      : Reading from shiprate.DATABASECHANGELOG
+2024-09-04T14:07:23.837-05:00  INFO 194234 --- [Shiprate] [    Test worker] liquibase.util                           : UPDATE SUMMARY
+2024-09-04T14:07:23.837-05:00  INFO 194234 --- [Shiprate] [    Test worker] liquibase.util                           : Run:                          0
+2024-09-04T14:07:23.837-05:00  INFO 194234 --- [Shiprate] [    Test worker] liquibase.util                           : Previously run:               1
+2024-09-04T14:07:23.837-05:00  INFO 194234 --- [Shiprate] [    Test worker] liquibase.util                           : Filtered out:                 0
+2024-09-04T14:07:23.837-05:00  INFO 194234 --- [Shiprate] [    Test worker] liquibase.util                           : -------------------------------
+2024-09-04T14:07:23.837-05:00  INFO 194234 --- [Shiprate] [    Test worker] liquibase.util                           : Total change sets:            1
+2024-09-04T14:07:23.838-05:00  INFO 194234 --- [Shiprate] [    Test worker] liquibase.util                           : Update summary generated
+2024-09-04T14:07:23.852-05:00  INFO 194234 --- [Shiprate] [    Test worker] liquibase.lockservice                    : Successfully released change log lock
+2024-09-04T14:07:23.853-05:00  INFO 194234 --- [Shiprate] [    Test worker] liquibase.command                        : Command execution complete
+2024-09-04T14:07:23.931-05:00  INFO 194234 --- [Shiprate] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-04T14:07:23.966-05:00  INFO 194234 --- [Shiprate] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.9.Final
+2024-09-04T14:07:23.990-05:00  INFO 194234 --- [Shiprate] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-04T14:07:24.134-05:00  INFO 194234 --- [Shiprate] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-04T14:07:24.705-05:00  INFO 194234 --- [Shiprate] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-04T14:07:24.707-05:00  INFO 194234 --- [Shiprate] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-04T14:07:25.019-05:00  WARN 194234 --- [Shiprate] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-04T14:07:25.328-05:00  INFO 194234 --- [Shiprate] [    Test worker] c.s.d.d.r.AccountRepositoryTest          : Started AccountRepositoryTest in 3.316 seconds (process running for 4.097)
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>WARNING: A Java agent has been loaded dynamically (/home/jeb/.sdkman/candidates/gradle/8.8/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.14.18/417558ea01fe9f0e8a94af28b9469d281c4e3984/byte-buddy-agent-1.14.18.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.5</a> at Sep 4, 2024, 2:07:26 PM</p>
+</div>
+</div>
+</body>
+</html>
