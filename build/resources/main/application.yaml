@@ -15,3 +15,28 @@ logging:
     com:
       shiprate: INFO
     root: INFO
+api:
+  oauth:
+    access:
+      token:
+        expiry:
+          tolerance: 5
+    base:
+      url: https://wwwcie.ups.com/
+    partner:
+      client:
+        id: <your OAuth clientId>
+      secret: <your OAuth secret>
+  rate:
+    base:
+      url: https://wwwcie.ups.com/api/
+    scenario:
+      tnt:
+        rate:
+          day:
+            from:
+              today: 5
+    transaction:
+      source: testing
+    version: v1
+

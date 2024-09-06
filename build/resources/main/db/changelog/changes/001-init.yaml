@@ -65,3 +65,17 @@ databaseChangeLog:
                   constraints:
                     nullable:  false
                     unique: true
+              - column:
+                  name:  created_at
+                  type:  datetime
+                  constraints:
+                    nullable:  false
+              - column:
+                  name:  modified_at
+                  type:  datetime
+              - column:
+                  name:  deleted_at
+                  type:  datetime
+              - column:
+                  name:  active
+                  type:  int

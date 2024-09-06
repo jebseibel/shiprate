@@ -22,7 +22,6 @@ dependencies {
     implementation 'mysql:mysql-connector-java:8.0.33'
     implementation platform("org.springframework.boot:spring-boot-dependencies:$springBootVersion")
 
-
     //liquibase
     implementation("org.liquibase:liquibase-core:$liquibaseVersion")
 
@@ -32,6 +31,7 @@ dependencies {
     implementation("io.swagger.core.v3:swagger-annotations:${swaggerAnnotationsVersion}")
     implementation("jakarta.annotation:jakarta.annotation-api:${jakartaAnnotationVersion}")
     implementation("org.apache.httpcomponents.client5:httpclient5:${httpclientVersion}")
+    implementation("org.openapitools:jackson-databind-nullable:0.2.6")
 
     //lombok
     implementation ("org.projectlombok:lombok:$lombokVersion")

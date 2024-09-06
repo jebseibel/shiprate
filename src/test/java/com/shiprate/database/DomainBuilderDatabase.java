@@ -3,6 +3,7 @@ package com.shiprate.database;
 
 import com.shiprate.common.ActiveEnum;
 import com.shiprate.database.db.entity.Account;
+import com.shiprate.database.db.entity.User;
 import org.apache.commons.lang3.RandomStringUtils;
 
 import java.math.BigDecimal;
@@ -19,10 +20,7 @@ public class DomainBuilderDatabase {
         return getAccount(null, null, null);
     }
 
-    public static Account getAccount(String name) {
-        return getAccount(name, null, null);
-    }
-
+    public static Account getAccount(String name) { return getAccount(name, null, null); }
     public static Account getAccount(
             String thisName,
             String thisDescription,
@@ -40,15 +38,26 @@ public class DomainBuilderDatabase {
         return item;
     }
 
-//          Account item = Account.builder()
-//                .extid(UUID.randomUUID().toString())
-//                .name( thisName != null ? thisName : getNameRandom())
-//                .description(thisDescription)
-//                .createdAt(LocalDateTime.now())
-//                .modifiedAt(null)
-//                .deletedAt(null)
-//                .active(ActiveEnum.ACTIVE.value)
-//        .build();
+    public static User getUser() {
+        return getUser(null, null);
+    }
+    public static User getUser(String thisName) {
+        return getUser(null, thisName);
+    }
+    public static User getUser(
+            String thisEmail,
+            String thisName
+    ) {
+        String random = getRandom();
+        User item = new User();
+        item.setEmail(thisEmail != null ? thisEmail : getEmailRandom());
+        item.setName(thisName != null ? thisName : getNameRandom(random));
+        item.setActive(ActiveEnum.ACTIVE.value);
+        item.setCreatedAt(LocalDateTime.now());
+        item.setModifiedAt(null);
+        item.setDeletedAt(null);
+        return item;
+    }
 
     // //////////////////////////////////////////////////////////////////
     public static BigDecimal getBigDecimal(String value) {
@@ -73,6 +82,11 @@ public class DomainBuilderDatabase {
 
     public static String getSymbolRandom() {
         return RandomStringUtils.random(4, true, false).toUpperCase();
+    }
+
+    public static String getEmailRandom() {
+        String username = RandomStringUtils.random(8, true, false).toLowerCase();
+        return username + "@gmail.com";
     }
 
     public static String getNameRandom(String random) {

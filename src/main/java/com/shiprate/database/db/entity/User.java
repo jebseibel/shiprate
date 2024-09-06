@@ -4,10 +4,11 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 @Data
 @Entity
-@Table(name = "account")
+@Table(name = "user")
 public class User implements Serializable {
     private static final long serialVersionUID = 330515747211210728L;
 
@@ -22,4 +23,19 @@ public class User implements Serializable {
 
     @Column(name = "email", length = 64, nullable = false, unique = true)
     private String email;
+
+    /**
+     * BASE FIELDS
+     */
+    @Column(name = "created_at", nullable = false)
+    private LocalDateTime createdAt;
+
+    @Column(name = "modified_at")
+    private LocalDateTime modifiedAt;
+
+    @Column(name = "deleted_at")
+    private LocalDateTime deletedAt;
+
+    @Column(name = "active")
+    private Integer active;
 }

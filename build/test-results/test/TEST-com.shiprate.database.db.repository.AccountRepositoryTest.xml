@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.shiprate.database.db.repository.AccountRepositoryTest" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="jeb-XPS-15-9570" time="0.0">
-  <properties/>
-  <system-out><![CDATA[14:07:21.812 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.shiprate.database.db.repository.AccountRepositoryTest]: AccountRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-14:07:21.893 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.shiprate.ShiprateApplication for test class com.shiprate.database.db.repository.AccountRepositoryTest
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

@@ -6,11 +6,11 @@ import com.shiprate.database.service.AccountDbService;
 import org.springframework.stereotype.Service;
 
 @Service
-public class RateService {
+public class AccountService {
 
     AccountDbService accountDbService;
 
-    public RateService(AccountDbService accountDbService) {
+    public AccountService(AccountDbService accountDbService) {
         this.accountDbService = accountDbService;
     }
 
