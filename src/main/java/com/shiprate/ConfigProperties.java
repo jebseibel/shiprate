@@ -1,6 +1,6 @@
 package com.shiprate;
 
-import com.shiprate.config.UpsConfig;
+import com.shiprate.config.GenericConfig;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -9,8 +9,8 @@ import org.springframework.context.annotation.Configuration;
 public class ConfigProperties {
 
     @Bean
-    @ConfigurationProperties(prefix = "ups")
-    public UpsConfig upsConfigApp() {
-        return new UpsConfig();
+    @ConfigurationProperties(prefix = "generic")
+    public GenericConfig genericConfig() {
+        return new GenericConfig();
     }
 }
