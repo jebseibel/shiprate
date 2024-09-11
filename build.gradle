@@ -35,7 +35,10 @@ dependencies {
 
     //client libs
     implementation 'com.google.code.gson:gson:2.8.1'
-    implementation("com.squareup.okhttp3:okhttp:3.4.1")
+    implementation 'io.gsonfire:gson-fire:1.8.3'
+    implementation("com.squareup.okhttp:okhttp:2.7.5")
+    implementation 'com.squareup.okhttp:logging-interceptor:2.7.5'
+    implementation 'org.threeten:threetenbp:1.3.5'
 
     //lombok
     implementation ("org.projectlombok:lombok:$lombokVersion")

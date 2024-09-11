@@ -1,13 +1,12 @@
-package com.shiprate.database.service;
+package com.trax.shiprate.database.service;
 
-import com.shiprate.database.DomainBuilderDatabase;
+import com.trax.shiprate.database.DomainBuilderDatabase;
 import com.trax.shiprate.database.db.entity.Account;
 import com.trax.shiprate.database.db.repository.AccountRepository;
 import com.trax.shiprate.database.exceptions.DatabaseAccessException;
 import com.trax.shiprate.database.exceptions.DatabaseDeleteFailureException;
 import com.trax.shiprate.database.exceptions.DatabaseRetrievalFailureException;
 import com.trax.shiprate.database.exceptions.DatabaseUpdateFailureException;
-import com.trax.shiprate.database.service.AccountDbService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;

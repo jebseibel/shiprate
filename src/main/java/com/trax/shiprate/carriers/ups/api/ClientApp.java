@@ -1,4 +1,4 @@
-package com.trax.shiprate.shippers.ups.api;
+package com.trax.shiprate.carriers.ups.api;
 
 import com.trax.shiprate.config.UpsConfig;
 import org.springframework.beans.factory.annotation.Autowired;

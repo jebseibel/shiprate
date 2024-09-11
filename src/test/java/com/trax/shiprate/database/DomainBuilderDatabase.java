@@ -1,4 +1,4 @@
-package com.shiprate.database;
+package com.trax.shiprate.database;
 
 
 import com.trax.shiprate.common.ActiveEnum;

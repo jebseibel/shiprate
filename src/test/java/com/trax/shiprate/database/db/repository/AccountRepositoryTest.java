@@ -1,8 +1,7 @@
-package com.shiprate.database.db.repository;
+package com.trax.shiprate.database.db.repository;
 
-import com.shiprate.database.DomainBuilderDatabase;
-import com.trax.shiprate.database.db.entity.User;
-import com.trax.shiprate.database.db.repository.UserRepository;
+import com.trax.shiprate.database.DomainBuilderDatabase;
+import com.trax.shiprate.database.db.entity.Account;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,23 +10,24 @@ import org.springframework.dao.DataIntegrityViolationException;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
-class UserRepositoryTest {
+class AccountRepositoryTest {
 
     @Autowired
-    private UserRepository repository;
+    private AccountRepository repository;
 
     @Nested
     class SuiteCrud {
 
         @Test
         void create() {
-            User item = DomainBuilderDatabase.getUser();
+            Account item = DomainBuilderDatabase.getAccount();
             assertNull(item.getId());
-            User result = repository.save(item);
+            Account result = repository.save(item);
 
             //test
             assertAll("Creation tests",
@@ -40,8 +40,8 @@ class UserRepositoryTest {
         @Test
         void createUniqueName() {
             String name = "notUnique_" + DomainBuilderDatabase.randomString();
-            User item1 = DomainBuilderDatabase.getUser(name);
-            User item2 = DomainBuilderDatabase.getUser(name);
+            Account item1 = DomainBuilderDatabase.getAccount(name);
+            Account item2 = DomainBuilderDatabase.getAccount(name);
 
             repository.save(item1);
             assertThrows(DataIntegrityViolationException.class, () -> repository.save(item2));
@@ -49,33 +49,33 @@ class UserRepositoryTest {
 
         @Test
         void update() {
-            User item = DomainBuilderDatabase.getUser();
+            Account item = DomainBuilderDatabase.getAccount();
             assertNull(item.getId());
             assertNull(item.getModifiedAt());
-            User record = repository.save(item);
+            Account record = repository.save(item);
 
             //now update
-            String changedName = "description_update";
-            record.setName(changedName);
+            String changedDescription = "description_update";
+            record.setDescription(changedDescription);
             record.setModifiedAt(LocalDateTime.now());
-            User resultUpdate = repository.save(record);
+            Account resultUpdate = repository.save(record);
 
             //test
             assertNotNull(resultUpdate);
-            assertEquals(resultUpdate.getName(), changedName);
+            assertEquals(resultUpdate.getDescription(), changedDescription);
             assertNotNull(resultUpdate.getModifiedAt());
         }
 
         @Test
         void delete() {
-            User item = DomainBuilderDatabase.getUser();
+            Account item = DomainBuilderDatabase.getAccount();
             assertNull(item.getId());
             assertNull(item.getDeletedAt());
-            User record = repository.save(item);
+            Account record = repository.save(item);
 
             //now update
             record.setDeletedAt(LocalDateTime.now());
-            User resultUpdate = repository.save(record);
+            Account resultUpdate = repository.save(record);
 
             //test
             assertNotNull(resultUpdate);
@@ -89,9 +89,9 @@ class UserRepositoryTest {
         @Test
         void findById() {
             String name = "name" + DomainBuilderDatabase.randomString();
-            User record = DomainBuilderDatabase.getUser(name);
-            User item = repository.save(record);
-            User result = repository.findById(item.getId()).get();
+            Account record = DomainBuilderDatabase.getAccount(name);
+            Account item = repository.save(record);
+            Account result = repository.findById(item.getId()).get();
 
             //test
             assertNotNull(result);
@@ -99,26 +99,26 @@ class UserRepositoryTest {
         }
 
         @Test
-        void findByEmail() {
-            String email = DomainBuilderDatabase.getEmailRandom();
-            User record = DomainBuilderDatabase.getUser();
-            record.setName(email);
+        void findByExtid() {
+            String extid = UUID.randomUUID().toString();
+            Account record = DomainBuilderDatabase.getAccount();
+            record.setExtid(extid);
 
             repository.save(record);
-            User result = repository.findByName(email).get();
+            Account result = repository.findByExtid(extid).get();
 
             //test
             assertNotNull(result);
-            assertEquals(result.getEmail(), email);
+            assertEquals(result.getExtid(), extid);
         }
 
         @Test
         void findByName() {
             String name = "name" + DomainBuilderDatabase.randomString();
-            User record = DomainBuilderDatabase.getUser(name);
+            Account record = DomainBuilderDatabase.getAccount(name);
 
             repository.save(record);
-            User result = repository.findByName(name).get();
+            Account result = repository.findByName(name).get();
 
             //test
             assertNotNull(result);
@@ -128,10 +128,10 @@ class UserRepositoryTest {
         @Test
         void findAll() {
             String name = "name" + DomainBuilderDatabase.randomString();
-            User record = DomainBuilderDatabase.getUser(name);
+            Account record = DomainBuilderDatabase.getAccount(name);
 
             repository.save(record);
-            List<User> result = repository.findAll();
+            List<Account> result = repository.findAll();
 
             //test
             assertNotNull(result);
