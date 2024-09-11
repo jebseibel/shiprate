@@ -29,7 +29,9 @@ public class FedexService {
         String clientId = "l7417fdc9322b84bcd83c76f75aeb5e5c7";
         String clientSecret = "3e445198e7dc469bbfff6618a6e120db";
 
-        Response response = api.aPIAuthorization(grantType, clientId, clientSecret, clientId, clientSecret, contentType);
+        System.out.println(fedexConfig);
+
+        Response response = api.aPIAuthorization(grantType, fedexConfig.getClientId(), fedexConfig.getSecret(), clientId, clientSecret, contentType);
         log.info(response.toString());
         return response;
     }
