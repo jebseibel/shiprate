@@ -1,7 +1,8 @@
 package com.shiprate.database.db.repository;
 
 import com.shiprate.database.DomainBuilderDatabase;
-import com.shiprate.database.db.entity.Account;
+import com.trax.shiprate.database.db.entity.Account;
+import com.trax.shiprate.database.db.repository.AccountRepository;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -27,11 +27,15 @@ dependencies {
 
     //other
     implementation("org.json:json:$jsonVersion")
-    implementation("com.squareup.okhttp3:okhttp:3.4.1")
+
     implementation("io.swagger.core.v3:swagger-annotations:${swaggerAnnotationsVersion}")
     implementation("jakarta.annotation:jakarta.annotation-api:${jakartaAnnotationVersion}")
     implementation("org.apache.httpcomponents.client5:httpclient5:${httpclientVersion}")
     implementation("org.openapitools:jackson-databind-nullable:0.2.6")
+
+    //client libs
+    implementation 'com.google.code.gson:gson:2.8.1'
+    implementation("com.squareup.okhttp3:okhttp:3.4.1")
 
     //lombok
     implementation ("org.projectlombok:lombok:$lombokVersion")

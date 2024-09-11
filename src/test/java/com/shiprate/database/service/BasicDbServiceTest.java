@@ -1,6 +1,7 @@
 package com.shiprate.database.service;
 
 import com.shiprate.database.DomainBuilderDatabase;
+import com.trax.shiprate.database.service.BaseDbService;
 import org.junit.jupiter.api.Test;
 
 class BasicDbServiceTest {

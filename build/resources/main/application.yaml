@@ -15,7 +15,7 @@ logging:
     com:
       shiprate: INFO
     root: INFO
-ups:
-  account_number: KE0572
-  clientId: NMt01JrxdtTzB8pwKuTjO5W15X4TMA6qykPruuXz6vGVRwrz
-  secret: W0lR1eFMxwkiqGiJXiJgzBHEjtgFr0IGMNFYITScJdO1gM0lTw8m6SPoMtJDfmEq
+generic:
+  account: GENERIC
+  client: ajkdhsajkdalkjd
+  secret: cJdO1gM0lTw8m6SPoMtJDfmEq

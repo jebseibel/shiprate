@@ -1,7 +1,8 @@
 package com.shiprate.database.db.repository;
 
 import com.shiprate.database.DomainBuilderDatabase;
-import com.shiprate.database.db.entity.User;
+import com.trax.shiprate.database.db.entity.User;
+import com.trax.shiprate.database.db.repository.UserRepository;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +11,6 @@ import org.springframework.dao.DataIntegrityViolationException;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.*;
 

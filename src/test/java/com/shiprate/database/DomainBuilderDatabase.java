@@ -1,9 +1,9 @@
 package com.shiprate.database;
 
 
-import com.shiprate.common.ActiveEnum;
-import com.shiprate.database.db.entity.Account;
-import com.shiprate.database.db.entity.User;
+import com.trax.shiprate.common.ActiveEnum;
+import com.trax.shiprate.database.db.entity.Account;
+import com.trax.shiprate.database.db.entity.User;
 import org.apache.commons.lang3.RandomStringUtils;
 
 import java.math.BigDecimal;
