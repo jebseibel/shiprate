@@ -20,6 +20,7 @@ class FedexServiceTest {
 
     @Test
     void getToken() throws ApiException {
-        var response = fedexService.getToken();
+        String accesstoken = fedexService.getAccessToken();
+        assertNotNull(accesstoken);
     }
 }

@@ -1,6 +1,5 @@
-package com.trax.shiprate.shippers.ups.api;
+package com.trax.shiprate.carriers.ups;
 
-import com.trax.shiprate.carriers.ups.api.ClientApp;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,11 +7,13 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.io.IOException;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 @SpringBootTest
-class ClientAppTest {
+class UpsServiceTest {
 
     @Autowired
-    private ClientApp clientApp;
+    private UpsService upsService;
 
     @BeforeEach
     void setUp() {
@@ -20,6 +21,7 @@ class ClientAppTest {
 
     @Test
     void getToken() throws IOException, InterruptedException {
-        clientApp.getToken();
+        String accesstoken = upsService.getAccessToken();
+        assertNotNull(accesstoken);
     }
 }
